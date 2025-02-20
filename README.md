@@ -19,29 +19,29 @@ The data was collected on 01/27/2025 by scraping titles from the first 100 pages
 From the originally 2135 posts scraped, 119 were flagged as duplicates and dropped from the data. Additionally, 132 posts were removed for being advertisements, resulting in 1884 posts used for this analysis.
 
 ## 3. Data Analysis
-**Sentiment**
+**Sentiment**<br>
 The Vader sentiment analyzer yielded the following share of sentiment groups based on compound:
 - Positive sentiment (compound > 0): n=833 (44%)
 - Negative sentiment (compound < 0): n=769 (41%)
 - Neutral sentiment (compound = 0): n=282 (15%)
 <img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/sentiment.png" alt="sentiment" width="250"/>
 
-**Voting, number of comments, number of authors and number of postings**
+**Voting, number of comments, number of authors and number of postings**<br>
 An F-Test showed that the three groups significantly differ in terms of community voting, the number of comments, the number of authors, and the number of postings within a single post (e.g. compilations).
 
-Exploring differences between the individual groups, Tukey's HSD Test concluded that positive and negative posts significantly differ in all abovementioned variables.
-<img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/num_cols.png" alt="num_cols" width="250"/>
+Exploring differences between the individual groups, Tukey's HSD Test concluded that positive and negative posts significantly differ in all abovementioned variables.<br>
+<img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/num_cols.png" alt="num_cols" width="500"/>
 
-**Categories**
+**Categories**<br>
 Amongst the categories with the largest share of positive posts are Jokes, Comics, Funny Memes, Dogs/Animals and Wholesome. In terms of total frequency, those categories are rather low in numbers. 
-On the bottom of ... we find the categories Relationship, Social Issues, Entitled people and Family. For those categories, we observe higher numbers of occurrence.
-<img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/categories.png" alt="categories" width="250"/>
+On the bottom of the positivity-share we find the categories Relationship, Social Issues, Entitled people and Family. For those categories, we observe higher numbers of occurrence.<br>
+<img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/categories.png" alt="categories" width="500"/>
 
-**Date**
-Visually, no distinct trend can be found for postings over time. This is a potential shortcoming of this analysis. The dates of upload that are provided on the posts' pages only go back as far as 10/31/2024. Including more data from posts before that date could gain further insights of the distribution over time.
-<img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/date.png" alt="date" width="250"/>
+**Date**<br>
+Visually, no distinct trend can be found for postings over time. This is a potential shortcoming of this analysis. The dates of upload that are provided on the posts' pages only go back as far as 10/31/2024. Including more data from posts before that date could gain further insights of the distribution over time.<br>
+<img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/date.png" alt="date" width="500"/>
 
-**Titles**
+**Titles**<br>
 Looking at a word cloud depicting the most common words present in the posts' titles, we find some substantial differences. Titles classified as having positive sentiment contain words describing humor as well as animals: Comic, Memes, Hilarious, Share, Funny, Christmas, Cat, Dog.
-Titles with negative sentiment, however, contain words associated with family/members (Family, Kid, Mom, Wife, Husband, MIL) and provocative behavior (Refuse, Leave)
-<img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/wordclouds.png" alt="wordclouds" width="250"/>
+Titles with negative sentiment, however, contain words associated with family/members (Family, Kid, Mom, Wife, Husband, MIL) and provocative behavior (Refuse, Leave)<br>
+<img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/wordclouds.png" alt="wordclouds" width="500"/>
