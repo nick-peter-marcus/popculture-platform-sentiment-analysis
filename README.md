@@ -69,4 +69,4 @@ Titles with negative sentiment, however, contain words associated with family/me
 </p>
 
 ## 4. Conclusion
-The statistical analyses show proof of the defined hypotheses: Positive and negative postings significantly differ in terms of community voting and the number of comments.
+The statistical analyses support the defined hypotheses: Positive and negative postings significantly differ in terms of community voting and the number of comments.
