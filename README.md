@@ -38,14 +38,14 @@ The Vader sentiment analyzer yielded the following share of sentiment groups bas
 </p>
 
 **Voting, number of comments, number of authors and number of postings**<br>
-<p align="center">
-  <img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/num_cols.png" alt="num_cols" width="500"/>
-</p>
 An F-Test showed that the three groups significantly differ in terms of community voting, the number of comments, the number of authors, and the number of postings within a single post (e.g. compilations).
 
 Exploring differences between the individual groups, Tukey's HSD Test concluded that positive and negative posts significantly differ in all abovementioned variables.
 <p align="center">
   <img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/tukeys_hsd_test.png" alt="tukeys_hsd_test" width="500"/>
+</p>
+<p align="center">
+  <img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/num_cols.png" alt="num_cols" width="500"/>
 </p>
 
 **Categories**<br>
