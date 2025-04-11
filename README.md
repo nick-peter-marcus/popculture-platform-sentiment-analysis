@@ -1,18 +1,25 @@
 # Introduction
 In this project, I explore the sentiment of post titles from a pop culture/meme website called Bored Panda.
 
-According to the page’s meta description<sup>[1](https://www.boredpanda.com/)</sup>:
+According to the [page’s meta description](https://www.boredpanda.com/):
 <blockquote>"Bored Panda is a leading art and pop culture magazine which is viewed nearly 100 million times every month. Our mission is to spread good news and highlight top artists from around the world."</blockquote>
 
-It has further been described<sup>[2](https://www.nytimes.com/2017/11/30/technology/facebook-bored-panda.html)</sup> as a website that 
-<blockquote>"[publishes] user-generated content from Reddit, Instagram, Twitter and other social platforms and repackage[s] it with tempting headlines. But by focusing on art, photography and other creative pursuits, and by studiously sticking to the kind of apolitical content that few people object to, Bored Panda has steadily built a feel-good, escapist empire.""</blockquote>
+In a [New York Times article](https://www.nytimes.com/2017/11/30/technology/facebook-bored-panda.html), the site has further been described as a website that 
+<blockquote>"[publishes] user-generated content from Reddit, Instagram, Twitter and other social platforms and repackage[s] it with tempting headlines. But by focusing on art, photography and other creative pursuits, and by studiously sticking to the kind of apolitical content that few people object to, Bored Panda has steadily built a feel-good, escapist empire."</blockquote>
 
 I personally found myself visiting this website frequently for amusement and killing time. However, I noticed that despite the described "feel-good" nature of this site, posts and their respective titles became more negative and provocative over time. While there still exist many positive posts about cute animals and funny memes, it seemed that most posts nowadays focus on frustrating topics of family disputes and AITA-posts.
 
-Hence, to quantitatively investigate the feeling of this website's perceived steady decline in positiveness, I decided to analyze the postings for their sentiment.
+This can potentially be drawn back to the theory, that provoking stories yield more interaction with the posts in form of comments and likes, and thus generate more traffic on the website.
+
+In order to quantitatively investigate the feeling of this website's perceived steady decline in positiveness, I decided to analyze the postings for their sentiment.
 
 # Project Scope
 This project spans the following steps:
+
+## 0. Forming hypotheses
+My hypotheses are that postings with provoking or negatively associated titles yield:
+- a) more comments and
+- b) more negative voting
 
 ## 1. Data retrieval
 The data was collected on 01/27/2025 by scraping titles from the first 100 pages of boredpanda.com. The associated posts were individually accessed to gather voting, the number of comments, posting date, as well as authorships. Scraping was performed by asyncio and parsed with BeautifulSoup.
@@ -31,11 +38,14 @@ The Vader sentiment analyzer yielded the following share of sentiment groups bas
 </p>
 
 **Voting, number of comments, number of authors and number of postings**<br>
+<p align="center">
+  <img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/num_cols.png" alt="num_cols" width="500"/>
+</p>
 An F-Test showed that the three groups significantly differ in terms of community voting, the number of comments, the number of authors, and the number of postings within a single post (e.g. compilations).
 
 Exploring differences between the individual groups, Tukey's HSD Test concluded that positive and negative posts significantly differ in all abovementioned variables.
 <p align="center">
-  <img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/num_cols.png" alt="num_cols" width="500"/>
+  <img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/tukeys_hsd_test.png" alt="tukeys_hsd_test" width="500"/>
 </p>
 
 **Categories**<br>
@@ -57,3 +67,6 @@ Titles with negative sentiment, however, contain words associated with family/me
 <p align="center">
   <img src="https://github.com/nick-peter-marcus/popculture-platform-sentiment-analysis/blob/main/images/wordclouds.png" alt="wordclouds" width="700"/>
 </p>
+
+## 4. Conclusion
+The statistical analyses show proof of the defined hypotheses: Positive and negative postings significantly differ in terms of community voting and the number of comments.
